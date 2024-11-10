@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Primitives;
+import Characters.Character;
+
 
 /**
  * Class that describes a node
@@ -11,8 +13,8 @@ package Primitives;
 public class Node {
     
     // Class attributes
-    private int id;
     private Character character;
+    private int id;
     private Node next;
     private int cycleNumber;
     
