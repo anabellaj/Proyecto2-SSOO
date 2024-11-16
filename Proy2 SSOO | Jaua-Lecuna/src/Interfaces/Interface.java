@@ -4,17 +4,22 @@
  */
 package Interfaces;
 
+import Disk.Buffer;
+
 /**
  *
  * @author alexandralecuna
  */
 public class Interface extends javax.swing.JFrame {
+    
+    Buffer buffer;
 
     /**
      * Creates new form Interface
      */
-    public Interface() {
+    public Interface(Buffer buffer) {
         initComponents();
+        this.buffer = buffer;
     }
 
     /**
@@ -76,7 +81,7 @@ public class Interface extends javax.swing.JFrame {
         starTrekLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StarTrekIMGs/Logo.png"))); // NOI18N
         panel.add(starTrekLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 410, 130));
 
-        starWarsLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StarWarsIMGs/vecteezy_star-wars-logo-png-star-wars-icon-transparent-png_27127457 (1).png"))); // NOI18N
+        starWarsLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StarWarsIMGs/Logo.png"))); // NOI18N
         panel.add(starWarsLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, -10, 490, 200));
 
         starSimulation.setBackground(new java.awt.Color(255, 255, 0));
@@ -289,40 +294,7 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_starSimulationActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Interface().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
