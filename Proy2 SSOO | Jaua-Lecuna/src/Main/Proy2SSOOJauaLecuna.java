@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Main;
+import Disk.Buffer;
 import Interfaces.Interface;
+import java.awt.Rectangle;
 ;
 
 /**
@@ -16,8 +18,12 @@ public class Proy2SSOOJauaLecuna {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Interface main = new Interface();
+       Buffer buffer = new Buffer();
+       Interface main = new Interface(buffer);
+       main.setLocationRelativeTo(null);
+       main.setResizable(false);
        main.setVisible(true);
+      
     }
     
 }
