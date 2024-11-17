@@ -5,8 +5,6 @@
 package Main;
 import Disk.Buffer;
 import Interfaces.Interface;
-import java.awt.Rectangle;
-;
 
 /**
  *
@@ -23,6 +21,7 @@ public class Proy2SSOOJauaLecuna {
        main.setLocationRelativeTo(null);
        main.setResizable(false);
        main.setVisible(true);
+       
       
     }
     

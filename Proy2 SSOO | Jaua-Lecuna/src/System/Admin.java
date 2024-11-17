@@ -150,18 +150,26 @@ public class Admin extends Thread{
         }
     }
 
+    /**
+     * Method that updates the data shown in the GUI
+     */
     public void updateWindow() {
-        updateQueues(getMainWindow().getEffortNick(), getBuffer().getNickEffortQueue());
-        updateQueues(getMainWindow().getEffortCartoon(), getBuffer().getCartoonEffortQueue());
-        updateQueues(getMainWindow().getTier1Nick(), getBuffer().getNickTier1Queue());
-        updateQueues(getMainWindow().getTier1Cartoon(), getBuffer().getCartoonTier1Queue());
-        updateQueues(getMainWindow().getTier2Nick(), getBuffer().getNickTier2Queue());
-        updateQueues(getMainWindow().getTier2Cartoon(), getBuffer().getCartoonTier2Queue());
-        updateQueues(getMainWindow().getTier3Nick(), getBuffer().getNickTier3Queue());
-        updateQueues(getMainWindow().getTier3Cartoon(), getBuffer().getCartoonTier3Queue());
+        updateQueues(getMainWindow().getStarWarsNivel4(), getBuffer().getStarWarsReinforcementQueue());
+        updateQueues(getMainWindow().getStarTreckNivel4(), getBuffer().getStarTrekReinforcementQueue());
+        updateQueues(getMainWindow().getStarWarsNivel1(), getBuffer().getStarWarsHighPriorityQueue());
+        updateQueues(getMainWindow().getStarTreckNivel1(), getBuffer().getStarTrekHighPriorityQueue());
+        updateQueues(getMainWindow().getStarWarsNivel2(), getBuffer().getStarWarsMediumPriorityQueue());
+        updateQueues(getMainWindow().getStarTreckNivel2(), getBuffer().getStarTrekMediumPriorityQueue());
+        updateQueues(getMainWindow().getStarWarsNivel3(), getBuffer().getStarWarsLowPriorityQueue());
+        updateQueues(getMainWindow().getStarTreckNivel3(), getBuffer().getStarTrekLowPriorityQueue());
 
     }
 
+    /**
+     * Method that turns a queue into a JList for the GUI
+     * @param list, current JList shown
+     * @param queue, queue to be shown 
+     */
     public void updateQueues(javax.swing.JList<String> list, Queue queue) {
         
         DefaultListModel model = new DefaultListModel();
@@ -175,6 +183,9 @@ public class Admin extends Thread{
 
     }
 
+    /**
+     * Method that creates a new character
+     */
     public void createNewCharacter() {
         int random = (int) Math.round(Math.random() * 19);
         Character starWarsCharacter;
@@ -193,6 +204,10 @@ public class Admin extends Thread{
 
     }
 
+    /**
+     * Method that moves a character to a queue depending on their priority
+     * @param fighter character to move
+     */
     public void movetoQueue(Character fighter) {
         switch (fighter.getFranchise()) {
             case StarWars:

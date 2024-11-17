@@ -36,13 +36,12 @@ public class Character {
         this.id = id;
         this.franchise = franchise;
         this.imgPath= imgPath;
-        //define su tipo 
         this.defineCharacterType();
     }
     
     /**
-     * 
-     * @param clone 
+     * Method that creates a copy of a character
+     * @param clone character to clone
      */
     public Character(Character clone){
         this.franchise = clone.getFranchise();
@@ -51,6 +50,9 @@ public class Character {
         this.imgPath = clone.getImgPath();
     }
     
+    /**
+     * Method that defines the character type 
+     */
     public void defineCharacterType(){
         
         boolean[] type = new boolean[4];
@@ -81,6 +83,7 @@ public class Character {
         // Weak character
         else if(!type[1]&&!type[0]){
             this.type = CharacterType.Weak;
+            System.out.println(name);
         }
         
         // Average character

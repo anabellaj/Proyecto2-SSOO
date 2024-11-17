@@ -6,6 +6,7 @@ package Disk;
 
 import Primitives.Queue;
 import java.util.concurrent.Semaphore;
+import Characters.Character;
 
 /**
  * Class that emulates the behavior of a buffer, storing the principal data needed for the simulation
