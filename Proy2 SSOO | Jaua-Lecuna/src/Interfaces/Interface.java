@@ -5,6 +5,12 @@
 package Interfaces;
 
 import Disk.Buffer;
+import Main.Initialize;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
 
 /**
  *
@@ -34,7 +40,7 @@ public class Interface extends javax.swing.JFrame {
         panel = new javax.swing.JPanel();
         starTrekLogo = new javax.swing.JLabel();
         starWarsLogo = new javax.swing.JLabel();
-        starSimulation = new javax.swing.JButton();
+        startSimulation = new javax.swing.JButton();
         result = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         starTreckNumWin = new javax.swing.JLabel();
@@ -90,15 +96,15 @@ public class Interface extends javax.swing.JFrame {
         starWarsLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/StarWarsIMGs/Logo.png"))); // NOI18N
         panel.add(starWarsLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, -10, 490, 200));
 
-        starSimulation.setBackground(new java.awt.Color(255, 255, 0));
-        starSimulation.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        starSimulation.setText("Start");
-        starSimulation.addActionListener(new java.awt.event.ActionListener() {
+        startSimulation.setBackground(new java.awt.Color(255, 255, 0));
+        startSimulation.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        startSimulation.setText("Iniciar");
+        startSimulation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                starSimulationActionPerformed(evt);
+                startSimulationActionPerformed(evt);
             }
         });
-        panel.add(starSimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 150, 50));
+        panel.add(startSimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 150, 50));
 
         result.setFont(new java.awt.Font("Phosphate", 1, 48)); // NOI18N
         result.setForeground(new java.awt.Color(255, 255, 0));
@@ -187,7 +193,13 @@ public class Interface extends javax.swing.JFrame {
         panel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 110, -1, -1));
 
         velocidad.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        velocidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.5", "1", "1.5", "2" }));
+        velocidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.25", "0.5", "1", "1.5", "2", "2.5", "3" }));
+        velocidad.setSelectedIndex(2);
+        velocidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                velocidadActionPerformed(evt);
+            }
+        });
         panel.add(velocidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, -1, -1));
 
         starTreckNivel3.setModel(new javax.swing.AbstractListModel<String>() {
@@ -197,7 +209,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(starTreckNivel3);
 
-        panel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 390, 120, 60));
+        panel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 120, 80));
 
         starTreckNivel1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -206,7 +218,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(starTreckNivel1);
 
-        panel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 120, 60));
+        panel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 120, 80));
 
         starTreckNivel2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -215,7 +227,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(starTreckNivel2);
 
-        panel.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 120, 60));
+        panel.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 120, 80));
 
         vsLabel2.setFont(new java.awt.Font("Phosphate", 1, 48)); // NOI18N
         vsLabel2.setForeground(new java.awt.Color(255, 255, 0));
@@ -230,12 +242,12 @@ public class Interface extends javax.swing.JFrame {
         jLabelSTN2.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
         jLabelSTN2.setForeground(new java.awt.Color(255, 255, 0));
         jLabelSTN2.setText("Nivel 2");
-        panel.add(jLabelSTN2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
+        panel.add(jLabelSTN2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
 
         jLabelSTN3.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
         jLabelSTN3.setForeground(new java.awt.Color(255, 255, 0));
         jLabelSTN3.setText("Nivel 3");
-        panel.add(jLabelSTN3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
+        panel.add(jLabelSTN3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
 
         starWarsNivel3.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -244,7 +256,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jScrollPane4.setViewportView(starWarsNivel3);
 
-        panel.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 400, 120, 60));
+        panel.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 420, 120, 80));
 
         starWarsNivel1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -253,7 +265,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jScrollPane5.setViewportView(starWarsNivel1);
 
-        panel.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 240, 120, 60));
+        panel.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 220, 120, 80));
 
         starWarsNivel2.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -262,7 +274,7 @@ public class Interface extends javax.swing.JFrame {
         });
         jScrollPane6.setViewportView(starWarsNivel2);
 
-        panel.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 320, 120, 60));
+        panel.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 320, 120, 80));
 
         jLabelSWN1.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
         jLabelSWN1.setForeground(new java.awt.Color(255, 255, 0));
@@ -272,12 +284,12 @@ public class Interface extends javax.swing.JFrame {
         jLabelSWN2.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
         jLabelSWN2.setForeground(new java.awt.Color(255, 255, 0));
         jLabelSWN2.setText("Nivel 2");
-        panel.add(jLabelSWN2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 330, -1, -1));
+        panel.add(jLabelSWN2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 360, -1, -1));
 
         jLabelSWN3.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
         jLabelSWN3.setForeground(new java.awt.Color(255, 255, 0));
         jLabelSWN3.setText("Nivel 3");
-        panel.add(jLabelSWN3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 410, -1, -1));
+        panel.add(jLabelSWN3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 450, -1, -1));
 
         starTreckName2.setFont(new java.awt.Font("Silom", 1, 24)); // NOI18N
         starTreckName2.setForeground(new java.awt.Color(255, 255, 255));
@@ -298,12 +310,12 @@ public class Interface extends javax.swing.JFrame {
         });
         jScrollPane7.setViewportView(starTreckNivel4);
 
-        panel.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 470, 120, 60));
+        panel.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 520, 120, 60));
 
         jLabelSTN4.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
         jLabelSTN4.setForeground(new java.awt.Color(255, 255, 0));
         jLabelSTN4.setText("Nivel 4");
-        panel.add(jLabelSTN4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, -1, -1));
+        panel.add(jLabelSTN4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 530, -1, -1));
 
         starWarsNivel4.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -312,21 +324,31 @@ public class Interface extends javax.swing.JFrame {
         });
         jScrollPane8.setViewportView(starWarsNivel4);
 
-        panel.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 480, 120, 60));
+        panel.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 520, 120, 60));
 
         jLabelSWN4.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
         jLabelSWN4.setForeground(new java.awt.Color(255, 255, 0));
         jLabelSWN4.setText("Nivel 4");
-        panel.add(jLabelSWN4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 490, -1, -1));
+        panel.add(jLabelSWN4, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 530, -1, -1));
 
         getContentPane().add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void starSimulationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_starSimulationActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_starSimulationActionPerformed
+    private void startSimulationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startSimulationActionPerformed
+        Initialize init = new Initialize(this, this.buffer);
+        init.init();
+        this.startSimulation.setEnabled(false);
+    }//GEN-LAST:event_startSimulationActionPerformed
+
+    private void velocidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_velocidadActionPerformed
+        double newSimSpeed = Double.parseDouble(this.velocidad.getSelectedItem().toString());
+
+        this.buffer.setSimSpeed(1000/newSimSpeed);
+        this.buffer.setNextSim(4000/newSimSpeed);
+        this.buffer.setSimLoad(2000/newSimSpeed);
+    }//GEN-LAST:event_velocidadActionPerformed
 
 
 
@@ -352,7 +374,6 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JPanel panel;
     private javax.swing.JLabel result;
-    private javax.swing.JButton starSimulation;
     private javax.swing.JPanel starTreckCharacter;
     private javax.swing.JLabel starTreckID;
     private javax.swing.JLabel starTreckName2;
@@ -375,7 +396,377 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel starWarsNumWin;
     private javax.swing.JLabel starWarsPlayer;
     private javax.swing.JLabel starWarsTipoCarta;
+    private javax.swing.JButton startSimulation;
     private javax.swing.JComboBox<String> velocidad;
     private javax.swing.JLabel vsLabel2;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * Gets the buffer with the current info
+     * @return the buffer 
+     */
+    public Buffer getBuffer() {
+        return buffer;
+    }
+
+    /**
+     * Sets a new buffer
+     * @param buffer to set
+     */
+    public void setBuffer(Buffer buffer) {
+        this.buffer = buffer;
+    }
+
+    /**
+     * Gets the fight result 
+     * @return the result
+     */
+    public JLabel getResult() {
+        return result;
+    }
+
+    /**
+     * Sets the fight result
+     * @param result to set 
+     */
+    public void setResult(JLabel result) {
+        this.result = result;
+    }
+
+    /**
+     * Gets the current star trek character
+     * @return the star trek character
+     */
+    public JPanel getStarTreckCharacter() {
+        return starTreckCharacter;
+    }
+
+    /**
+     * Sets the current star trek character
+     * @param starTreckCharacter character to set 
+     */
+    public void setStarTreckCharacter(JPanel starTreckCharacter) {
+        this.starTreckCharacter = starTreckCharacter;
+    }
+
+    /**
+     * Gets the id of the star trek character
+     * @return the id of the character 
+     */
+    public JLabel getStarTreckID() {
+        return starTreckID;
+    }
+
+    /**
+     * Sets the id of the star trek character
+     * @param starTreckID id to set 
+     */
+    public void setStarTreckID(JLabel starTreckID) {
+        this.starTreckID = starTreckID;
+    }
+
+    /**
+     * Gets the name of the star trek character
+     * @return the name of the character
+     */
+    public JLabel getStarTreckName2() {
+        return starTreckName2;
+    }
+
+    /**
+     * Sets the name of the star trek character
+     * @param starTreckName2 name to set 
+     */
+    public void setStarTreckName2(JLabel starTreckName2) {
+        this.starTreckName2 = starTreckName2;
+    }
+
+    /**
+     * Gets the list of star trek characters in the highest priority
+     * @return characters in the high priority list
+     */
+    public JList<String> getStarTreckNivel1() {
+        return starTreckNivel1;
+    }
+
+    /**
+     * Sets the list of star trek characters in the highest priority
+     * @param starTreckNivel1 list of characters to set 
+     */
+    public void setStarTreckNivel1(JList<String> starTreckNivel1) {
+        this.starTreckNivel1 = starTreckNivel1;
+    }
+
+    /**
+     * Gets the list of star trek characters in the medium priority
+     * @return characters in the medium priority list 
+     */
+    public JList<String> getStarTreckNivel2() {
+        return starTreckNivel2;
+    }
+
+    /**
+     * Sets the list of star trek characters in the medium priority
+     * @param starTreckNivel2 list of characters to set
+     */
+    public void setStarTreckNivel2(JList<String> starTreckNivel2) {
+        this.starTreckNivel2 = starTreckNivel2;
+    }
+
+    /**
+     * Gets the list of star trek characters in the low priority
+     * @return characters in the low priority list
+     */
+    public JList<String> getStarTreckNivel3() {
+        return starTreckNivel3;
+    }
+
+    /**
+     * Sets the list of star trek characters in the low priority
+     * @param starTreckNivel3 list of characters to set 
+     */
+    public void setStarTreckNivel3(JList<String> starTreckNivel3) {
+        this.starTreckNivel3 = starTreckNivel3;
+    }
+
+    /**
+     * Gets the list of star trek characters in the reinforcement list 
+     * @return characters in the reinforcement list 
+     */
+    public JList<String> getStarTreckNivel4() {
+        return starTreckNivel4;
+    }
+
+    /**
+     * Sets the list of star trek characters in the reinforcement list 
+     * @param starTreckNivel4 list of characters to set 
+     */
+    public void setStarTreckNivel4(JList<String> starTreckNivel4) {
+        this.starTreckNivel4 = starTreckNivel4;
+    }
+
+    /**
+     * Gets the total number of wins for the star trek franchise 
+     * @return the number of wins
+     */
+    public JLabel getStarTreckNumWin() {
+        return starTreckNumWin;
+    }
+
+    /**
+     * Sets the total number of wins for the star trek franchise 
+     * @param starTreckNumWin number of wins to set 
+     */
+    public void setStarTreckNumWin(JLabel starTreckNumWin) {
+        this.starTreckNumWin = starTreckNumWin;
+    }
+
+    /**
+     * Gets the current star trek player image
+     * @return the image
+     */
+    public JLabel getStarTreckPlayer() {
+        return starTreckPlayer;
+    }
+
+    /**
+     * Sets the current star trek player image
+     * @param starTreckPlayer image to set 
+     */
+    public void setStarTreckPlayer(JLabel starTreckPlayer) {
+        this.starTreckPlayer = starTreckPlayer;
+    }
+
+    /**
+     * Gets the star trek character type
+     * @return the character type
+     */
+    public JLabel getStarTreckTipoCarta() {
+        return starTreckTipoCarta;
+    }
+
+    /**
+     * Sets the star trek character type
+     * @param starTreckTipoCarta character type to set 
+     */
+    public void setStarTreckTipoCarta(JLabel starTreckTipoCarta) {
+        this.starTreckTipoCarta = starTreckTipoCarta;
+    }
+
+    /**
+     * Gets the current star wars character
+     * @return the star wars character 
+     */
+    public JPanel getStarWarsCharacter() {
+        return starWarsCharacter;
+    }
+
+    /**
+     * Sets the current star wars character
+     * @param starWarsCharacter character to set 
+     */
+    public void setStarWarsCharacter(JPanel starWarsCharacter) {
+        this.starWarsCharacter = starWarsCharacter;
+    }
+
+    /**
+     * Gets the current star wars character id
+     * @return the id of the character
+     */
+    public JLabel getStarWarsID() {
+        return starWarsID;
+    }
+
+    /**
+     * Sets the current star wars character id
+     * @param starWarsID id to set 
+     */
+    public void setStarWarsID(JLabel starWarsID) {
+        this.starWarsID = starWarsID;
+    }
+
+    /**
+     * Gets the current star wars character name
+     * @return the character name 
+     */
+    public JLabel getStarWarsName() {
+        return starWarsName;
+    }
+
+    /**
+     * Sets the current star wars character name 
+     * @param starWarsName name to set 
+     */
+    public void setStarWarsName(JLabel starWarsName) {
+        this.starWarsName = starWarsName;
+    }
+
+    /**
+     * Gets the list of star wars characters in the highest priority
+     * @return list of character in the highest priority
+     */
+    public JList<String> getStarWarsNivel1() {
+        return starWarsNivel1;
+    }
+
+    /**
+     * Sets the list of star wars characters in the highest priority
+     * @param starWarsNivel1 character list to set
+     */
+    public void setStarWarsNivel1(JList<String> starWarsNivel1) {
+        this.starWarsNivel1 = starWarsNivel1;
+    }
+
+    /**
+     * Gets the list of star wars characters in the medium priority
+     * @return list of characters in the medium priority
+     */
+    public JList<String> getStarWarsNivel2() {
+        return starWarsNivel2;
+    }
+
+    /**
+     * Sets the list of star wars characters in the medium priority
+     * @param starWarsNivel2 character list to set 
+     */
+    public void setStarWarsNivel2(JList<String> starWarsNivel2) {
+        this.starWarsNivel2 = starWarsNivel2;
+    }
+
+    /**
+     * Gets the list of star wars characters in the low priority
+     * @return list of characters in the low priority 
+     */
+    public JList<String> getStarWarsNivel3() {
+        return starWarsNivel3;
+    }
+
+    /**
+     * Sets the list of star wars characters in the low priority
+     * @param starWarsNivel3 character list to set 
+     */
+    public void setStarWarsNivel3(JList<String> starWarsNivel3) {
+        this.starWarsNivel3 = starWarsNivel3;
+    }
+
+    /**
+     * Gets the list of star wars characters in the reinforcement list 
+     * @return list of characters in the reinforcement list
+     */
+    public JList<String> getStarWarsNivel4() {
+        return starWarsNivel4;
+    }
+
+    /**
+     * Sets the list of star wars characters in the reinforcement list 
+     * @param starWarsNivel4 character list to set 
+     */
+    public void setStarWarsNivel4(JList<String> starWarsNivel4) {
+        this.starWarsNivel4 = starWarsNivel4;
+    }
+
+    /**
+     * Gets the total number of wins for the star wars franchise 
+     * @return the numbers of wins
+     */
+    public JLabel getStarWarsNumWin() {
+        return starWarsNumWin;
+    }
+
+    /**
+     * Sets the total number of wins for the star wars franchise 
+     * @param starWarsNumWin numbers of wins to set 
+     */
+    public void setStarWarsNumWin(JLabel starWarsNumWin) {
+        this.starWarsNumWin = starWarsNumWin;
+    }
+
+    /**
+     * Gets the current star wars character image
+     * @return the character image
+     */
+    public JLabel getStarWarsPlayer() {
+        return starWarsPlayer;
+    }
+
+    /**
+     * Sets the current star wars character image
+     * @param starWarsPlayer image to set 
+     */
+    public void setStarWarsPlayer(JLabel starWarsPlayer) {
+        this.starWarsPlayer = starWarsPlayer;
+    }
+
+    /**
+     * Gets the current star wars character type
+     * @return character type
+     */
+    public JLabel getStarWarsTipoCarta() {
+        return starWarsTipoCarta;
+    }
+
+    /**
+     * Sets the current star wars character type
+     * @param starWarsTipoCarta character type to set
+     */
+    public void setStarWarsTipoCarta(JLabel starWarsTipoCarta) {
+        this.starWarsTipoCarta = starWarsTipoCarta;
+    }
+
+    /**
+     * Gets the current simulation speed
+     * @return the simulation speed
+     */
+    public JComboBox<String> getVelocidad() {
+        return velocidad;
+    }
+
+    /**
+     * Sets the current simulation speed
+     * @param velocidad speed to set 
+     */
+    public void setVelocidad(JComboBox<String> velocidad) {
+        this.velocidad = velocidad;
+    }
+    
 }

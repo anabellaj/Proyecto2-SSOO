@@ -5,8 +5,7 @@
 package Main;
 import Disk.Buffer;
 import Interfaces.Interface;
-import java.awt.Rectangle;
-;
+import javax.swing.ImageIcon;
 
 /**
  *
