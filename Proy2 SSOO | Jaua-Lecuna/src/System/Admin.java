@@ -74,7 +74,7 @@ public class Admin extends Thread{
 
             // The queues are updated depending on the cycle number 
             Queue fullCycleQueueMediumPrioritySW = getBuffer().getStarWarsMediumPriorityQueue().dequeueFullCycle();
-            getBuffer().getStarTrekHighPriorityQueue().queueFullCycleNodes(fullCycleQueueMediumPrioritySW, PriorityLevel.HighPriority);
+            getBuffer().getStarWarsHighPriorityQueue().queueFullCycleNodes(fullCycleQueueMediumPrioritySW, PriorityLevel.HighPriority);
 
             Queue fullCycleQueueLowPrioritySW = getBuffer().getStarWarsLowPriorityQueue().dequeueFullCycle();
             getBuffer().getStarWarsMediumPriorityQueue().queueFullCycleNodes(fullCycleQueueLowPrioritySW, PriorityLevel.MediumPriority);
@@ -106,15 +106,15 @@ public class Admin extends Thread{
 
             if (!buffer.getStarTrekHighPriorityQueue().isEmpty()) {
 
-                starWarsFighter = getBuffer().getStarTrekHighPriorityQueue().dequeueCharacter();
+                starTrekFighter = getBuffer().getStarTrekHighPriorityQueue().dequeueCharacter();
 
             } else if (!buffer.getStarTrekMediumPriorityQueue().isEmpty()) {
 
-                starWarsFighter = getBuffer().getStarTrekMediumPriorityQueue().dequeueCharacter();
+                starTrekFighter = getBuffer().getStarTrekMediumPriorityQueue().dequeueCharacter();
 
             } else if (!buffer.getStarTrekLowPriorityQueue().isEmpty()) {
 
-                starWarsFighter = getBuffer().getStarTrekLowPriorityQueue().dequeueCharacter();
+                starTrekFighter = getBuffer().getStarTrekLowPriorityQueue().dequeueCharacter();
 
             }
            

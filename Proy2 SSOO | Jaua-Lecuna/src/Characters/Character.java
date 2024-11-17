@@ -83,7 +83,6 @@ public class Character {
         // Weak character
         else if(!type[1]&&!type[0]){
             this.type = CharacterType.Weak;
-            System.out.println(name);
         }
         
         // Average character
