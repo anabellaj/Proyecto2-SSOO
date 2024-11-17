@@ -106,11 +106,11 @@ public class Interface extends javax.swing.JFrame {
         });
         panel.add(startSimulation, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, 150, 50));
 
-        result.setFont(new java.awt.Font("Phosphate", 1, 48)); // NOI18N
+        result.setFont(new java.awt.Font("Phosphate", 1, 36)); // NOI18N
         result.setForeground(new java.awt.Color(255, 255, 0));
         result.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         result.setText("Resultado");
-        panel.add(result, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 510, -1, -1));
+        panel.add(result, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, 410, -1));
 
         jLabel1.setFont(new java.awt.Font("Silom", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -152,11 +152,11 @@ public class Interface extends javax.swing.JFrame {
 
         panel.add(starWarsCharacter, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, -1, -1));
 
-        starWarsID.setFont(new java.awt.Font("Silom", 1, 18)); // NOI18N
+        starWarsID.setFont(new java.awt.Font("Silom", 1, 14)); // NOI18N
         starWarsID.setForeground(new java.awt.Color(255, 255, 255));
         starWarsID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         starWarsID.setText("ID");
-        panel.add(starWarsID, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 460, -1, -1));
+        panel.add(starWarsID, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, 130, -1));
 
         starWarsNumWin.setFont(new java.awt.Font("Silom", 1, 24)); // NOI18N
         starWarsNumWin.setForeground(new java.awt.Color(255, 255, 255));
@@ -169,23 +169,23 @@ public class Interface extends javax.swing.JFrame {
         jLabel4.setText("Ganadores:");
         panel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, -1, -1));
 
-        starTreckID.setFont(new java.awt.Font("Silom", 1, 18)); // NOI18N
+        starTreckID.setFont(new java.awt.Font("Silom", 1, 14)); // NOI18N
         starTreckID.setForeground(new java.awt.Color(255, 255, 255));
         starTreckID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         starTreckID.setText("ID");
-        panel.add(starTreckID, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 460, -1, -1));
+        panel.add(starTreckID, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 140, -1));
 
-        starWarsName.setFont(new java.awt.Font("Silom", 1, 24)); // NOI18N
+        starWarsName.setFont(new java.awt.Font("Silom", 1, 14)); // NOI18N
         starWarsName.setForeground(new java.awt.Color(255, 255, 255));
         starWarsName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         starWarsName.setText("Nombre");
-        panel.add(starWarsName, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, -1, -1));
+        panel.add(starWarsName, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, 160, -1));
 
-        starWarsTipoCarta.setFont(new java.awt.Font("Silom", 1, 24)); // NOI18N
+        starWarsTipoCarta.setFont(new java.awt.Font("Silom", 1, 14)); // NOI18N
         starWarsTipoCarta.setForeground(new java.awt.Color(255, 255, 255));
         starWarsTipoCarta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         starWarsTipoCarta.setText("Tipo Carta");
-        panel.add(starWarsTipoCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 400, -1, -1));
+        panel.add(starWarsTipoCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 400, 160, -1));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -291,17 +291,17 @@ public class Interface extends javax.swing.JFrame {
         jLabelSWN3.setText("Nivel 3");
         panel.add(jLabelSWN3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 450, -1, -1));
 
-        starTreckName2.setFont(new java.awt.Font("Silom", 1, 24)); // NOI18N
+        starTreckName2.setFont(new java.awt.Font("Silom", 1, 14)); // NOI18N
         starTreckName2.setForeground(new java.awt.Color(255, 255, 255));
         starTreckName2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         starTreckName2.setText("Nombre");
-        panel.add(starTreckName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, -1, -1));
+        panel.add(starTreckName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 160, -1));
 
-        starTreckTipoCarta.setFont(new java.awt.Font("Silom", 1, 24)); // NOI18N
+        starTreckTipoCarta.setFont(new java.awt.Font("Silom", 1, 14)); // NOI18N
         starTreckTipoCarta.setForeground(new java.awt.Color(255, 255, 255));
         starTreckTipoCarta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         starTreckTipoCarta.setText("Tipo Carta");
-        panel.add(starTreckTipoCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, -1, -1));
+        panel.add(starTreckTipoCarta, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 160, -1));
 
         starTreckNivel4.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
