@@ -17,6 +17,12 @@ public class Queue {
     private Node back; 
     private int length; 
     
+    public Queue() {
+        this.front = null;
+        this.back = null;
+        this.length = 0;
+    }
+    
     /**
      * Checks if the queue is currently empty
      * @return true if empty, else false
@@ -130,7 +136,7 @@ public class Queue {
             firstNode = getFront();
 
             setFront(getFront().getNext());
-            setLength(getLength() + 1);
+            setLength(getLength() - 1);
 
         }
         return firstNode;

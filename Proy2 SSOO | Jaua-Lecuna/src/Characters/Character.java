@@ -63,6 +63,7 @@ public class Character {
         for (int i = 0; i < 4; i++) {
             prob = Math.random();
             type[i] = (prob<=base[i]);
+            System.out.println(prob);
         }
         
         // Legendary character

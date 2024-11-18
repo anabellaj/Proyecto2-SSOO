@@ -39,7 +39,7 @@ public class Initialize {
         Admin admin = new Admin(buffer, mainWindow, 39);
         Processor processor = new Processor(buffer, mainWindow);
         
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 19; i++) {
             admin.movetoQueue(buffer.getStarWarsCharacters()[i]);
             admin.movetoQueue(buffer.getStarTrekCharacters()[i]);
         }
@@ -84,7 +84,7 @@ public class Initialize {
        buffer.getStarTrekCharacters()[5] = new Character("Hikaru",25, FranchiseType.StarTrek, "./src/StarTrekIMGs/hikaru.jpeg");
        buffer.getStarTrekCharacters()[6] = new Character("Pavel",26, FranchiseType.StarTrek, "./src/StarTrekIMGs/pavel.jpg");
        buffer.getStarTrekCharacters()[7] = new Character("Commander Data",27, FranchiseType.StarTrek, "./src/StarTrekIMGs/data.jpg");
-       buffer.getStarTrekCharacters()[8] = new Character("Jean-Luc Piccard",28, FranchiseType.StarTrek, "./src/StarTrekIMGs/Jean-Luc.png");
+       buffer.getStarTrekCharacters()[8] = new Character("Jean-Luc Piccard",28, FranchiseType.StarTrek, "./src/StarTrekIMGs/Jean-Luc.jpg");
        buffer.getStarTrekCharacters()[9] = new Character("William Riker",29, FranchiseType.StarTrek, "./src/StarTrekIMGs/William T. Riker.jpg");
        buffer.getStarTrekCharacters()[10] = new Character("Geordi La Forge",30, FranchiseType.StarTrek, "./src/StarTrekIMGs/Geordi.jpeg");
        buffer.getStarTrekCharacters()[11] = new Character("Deanna Troi",31, FranchiseType.StarTrek, "./src/StarTrekIMGs/Deanna.jpeg");
