@@ -9,6 +9,7 @@ import Interfaces.Interface;
 import System.Admin;
 import System.Processor;
 import Characters.Character;
+import Primitives.Node;
 import Types.FranchiseType;
 
 
@@ -39,7 +40,7 @@ public class Initialize {
         Admin admin = new Admin(buffer, mainWindow, 39);
         Processor processor = new Processor(buffer, mainWindow);
         
-        for (int i = 0; i < 19; i++) {
+        for (int i = 0; i < 20; i++) {
             admin.movetoQueue(buffer.getStarWarsCharacters()[i]);
             admin.movetoQueue(buffer.getStarTrekCharacters()[i]);
         }

@@ -96,7 +96,7 @@ public class Processor extends Thread{
                         // Star Trek Wins
                         } else {
                             getBuffer().getStarTrekWinners().queueCharacter(starTrekFighter, starTrekFighter.getId(), 0);
-                            getMainWindow().getResult().setText("Gana Star Trek!🖖🏼");
+                            getMainWindow().getResult().setText("Gana Star Trek!🖖");
                             int starTrekWins = Integer.parseInt(getMainWindow().getStarTreckNumWin().getText());
                             starTrekWins++;
                             getMainWindow().getStarTreckNumWin().setText(String.valueOf(starTrekWins));
