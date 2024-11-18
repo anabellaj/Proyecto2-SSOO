@@ -30,13 +30,13 @@ public class Processor extends Thread{
     @Override
     public void run() {
         while (true) {
-            System.out.println("p1");
+            
             try {
                 try {
-                    System.out.println("p3");
+                    
                     getBuffer().getSemaphore2().release();
                     getBuffer().getSemaphore1().acquire();
-                    System.out.println("p4");
+                    
                 } catch (Exception e) {
                     System.out.println(e);
                 }

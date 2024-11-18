@@ -56,6 +56,8 @@ public class Character {
     public void defineCharacterType(){
         
         boolean[] type = new boolean[4];
+        
+        // 70% high life points - 60% high habilities - 50% high strength - 40% high agility 
         double[] base = {0.7,0.6,0.5,0.4};
         double prob;
         
@@ -63,29 +65,30 @@ public class Character {
         for (int i = 0; i < 4; i++) {
             prob = Math.random();
             type[i] = (prob<=base[i]);
+            System.out.println(prob);
         }
         
-        // Legendary character
+        // Legendary character - High strength and agility
         if(type[2]&&type[3]){ 
             this.type = CharacterType.Legendary;
         }
         
-        // Expert character
+        // Expert character - High stength or high agility 
         else if(type[2]||type[3]){
             this.type = CharacterType.Expert;
         }
         
-        // Skilled character
+        // Skilled character - High life points or high habilities 
         else if(type[1]||type[0]){
             this.type = CharacterType.Skilled;
         }
         
-        // Weak character
+        // Weak character - Low life points and low abilities 
         else if(!type[1]&&!type[0]){
             this.type = CharacterType.Weak;
         }
         
-        // Average character
+        // Average character - Other combinations 
         else{
             this.type = CharacterType.Average;
         }
